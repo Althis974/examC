@@ -6,7 +6,7 @@
 /*   By: rlossy <marvin@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2017/12/04 10:12:14 by rlossy       #+#   ##    ##    #+#       */
-/*   Updated: 2017/12/04 17:26:30 by rlossy      ###    #+. /#+    ###.fr     */
+/*   Updated: 2017/12/05 09:47:52 by rlossy      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -68,10 +68,10 @@ char	*ft_itoa(int nbr)
 		return (ft_strdup("-2147483648"));
 	val = ft_abs(nbr);
 	len = get_len(val);
-	if ((res = (char*)malloc(sizeof(char) * (len + 1))) == NULL)
-		return (NULL);
 	if (nbr < 0)
 		len++;
+	if ((res = (char*)malloc(sizeof(char) * (len + 1))) == NULL)
+		return (NULL);
 	i = 0;
 	while (i++ < len)
 	{
