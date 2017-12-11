@@ -6,9 +6,11 @@
 /*   By: rlossy <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/20 12:44:29 by rlossy            #+#    #+#             */
-/*   Updated: 2017/11/20 13:09:52 by rlossy           ###   ########.fr       */
+/*   Updated: 2017/12/11 16:19:46 by rlossy      ###    #+. /#+    ###.fr     */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 void	swap(int *a, int *b)
 {
@@ -40,4 +42,19 @@ void	sort_int_tab(int *tab, unsigned int size)
 		len++;
 		j = 0;
 	}
+}
+
+int main(void)
+{
+	int tab[10] = {1, 5, 4, 2, 2, -5, -2, 8, 10, -5};
+	int size = 10;
+	int i = 0;
+
+	sort_int_tab(tab, size);
+	while (i < size)
+	{
+		printf("%d\n", tab[i]);
+		i++;
+	}
+	return (0);
 }
